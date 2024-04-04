@@ -19,16 +19,21 @@ function harry_theme_support()
 
     /** refresh widgest **/
     add_theme_support('customize-selective-refresh-widgets');
+
+    register_nav_menus(array(
+        'main-menu' => __('Main Menu', 'harry'),
+        'side-menu' => __('Side Menu', 'harry'),
+    ));
 };
 add_action('after_setup_theme', 'harry_theme_support');
 
 
-
-
-
 include_once('inc/common/script.php');
-include_once('inc/harry-kirki.php');
+if (class_exists('kirki')) {
+    include_once('inc/harry-kirki.php');
+}
 include_once('inc/template-function.php');
+include_once('inc/nav-walker.php');
 
 
 // register fonts

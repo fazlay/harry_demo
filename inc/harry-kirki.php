@@ -20,7 +20,22 @@ function harry_header_info()
             'priority'    => 160,
         ]
     );
+    new \Kirki\Field\Select(
+        [
+            'settings'    => 'header-style',
+            'label'       => esc_html__('Select Header Style', 'harry'),
+            'section'     => 'harry_header_info',
+            'default'     => 'header-style-1',
+            'placeholder' => esc_html__('Choose a Header Style', 'harry'),
+            'choices'     => [
+                'header-style-1' => esc_html__('Header Style 01', 'harry'),
+                'header-style-2' => esc_html__('Header Style 02', 'harry'),
+                'header-style-3' => esc_html__('Header Style 03', 'harry'),
+                'header-style-4' => esc_html__('Header Style 04', 'harry'),
 
+            ],
+        ]
+    );
     new \Kirki\Field\Text(
         [
             'settings' => 'harry_email',
@@ -50,6 +65,7 @@ function harry_header_info()
     );
 }
 
+
 function harry_header_logo()
 {
     new \Kirki\Section(
@@ -71,6 +87,136 @@ function harry_header_logo()
             'priority' => 10,
         ]
     );
+
+    new \Kirki\Field\Image(
+        [
+            'settings' => 'harry_search_logo ',
+            'label'    => esc_html__('Search Logo', 'harry'),
+            'section'  => 'harry_header_logo',
+            'default'  => get_template_directory_uri() . '/assets/img/logo/logo.svg',
+            'priority' => 10,
+        ]
+    );
+}
+
+function harry_side_info_section()
+{
+    new \Kirki\Section(
+        'harry_header_logo',
+        [
+            'title'       => esc_html__('Side Info', 'harry'),
+            'description' => esc_html__('Side info section here', 'harry'),
+            'panel'       => 'harry_panel',
+            'priority'    => 160,
+        ]
+    );
+
+    new \Kirki\Field\Text(
+        [
+            'settings' => 'harry_side_email',
+            'label'    => esc_html__('Side Bar Email', 'harry'),
+            'section'  => 'harry_header_info',
+            'default'  => esc_html__('info@example.com', 'harry'),
+            'priority' => 10,
+        ]
+    );
+
+    new \Kirki\Field\Image(
+        [
+            'settings' => 'harry_side_logo ',
+            'label'    => esc_html__('Side Logo', 'harry'),
+            'section'  => 'harry_header_logo',
+            'default'  => get_template_directory_uri() . '/assets/img/logo/logo.svg',
+            'priority' => 10,
+        ]
+    );
+
+
+    new \Kirki\Field\Text(
+        [
+            'settings' => 'harry_side_phone',
+            'label'    => esc_html__('Side bar Phone', 'harry'),
+            'section'  => 'harry_header_info',
+            'default'  => esc_html__('+9847383394', 'harry'),
+            'priority' => 10,
+        ]
+    );
+    new \Kirki\Field\Text(
+        [
+            'settings' => 'harry_side_button',
+            'label'    => esc_html__('Side bar Button', 'harry'),
+            'section'  => 'harry_header_info',
+            'default'  => esc_html__('Getting Started', 'harry'),
+            'priority' => 10,
+        ]
+    );
+    new \Kirki\Field\Text(
+        [
+            'settings' => 'harry_side_button_url',
+            'label'    => esc_html__('Side bar Button URL', 'harry'),
+            'section'  => 'harry_header_info',
+            'default'  => esc_html__('#', 'harry'),
+            'priority' => 10,
+        ]
+    );
+}
+
+function harry_social_info()
+{
+    new \Kirki\Section(
+        'harry_social_info',
+        [
+            'title'       => esc_html__('Social Info', 'harry'),
+            'description' => esc_html__('Social info section', 'harry'),
+            'panel'       => 'harry_panel',
+            'priority'    => 160,
+        ]
+    );
+
+    new \Kirki\Field\Text(
+        [
+            'settings' => 'harry_facebook',
+            'label'    => esc_html__('Facebook URL', 'harry'),
+            'section'  => 'harry_social_info',
+            'default'  => esc_html__('', 'harry'),
+            'priority' => 10,
+        ]
+    );
+
+    new \Kirki\Field\Text(
+        [
+            'settings' => 'harry_twitter',
+            'label'    => esc_html__('Twitter URL', 'harry'),
+            'section'  => 'harry_social_info',
+            'default'  => esc_html__('', 'harry'),
+            'priority' => 10,
+        ]
+    );
+
+    new \Kirki\Field\Text(
+        [
+            'settings' => 'harry_linkedin',
+            'label'    => esc_html__('Linkedin URL', 'harry'),
+            'section'  => 'harry_social_info',
+            'default'  => esc_html__('', 'harry'),
+            'priority' => 10,
+        ]
+    );
+    new \Kirki\Field\Checkbox_Switch(
+        [
+            'settings'    => 'harry_side_logo_switch',
+            'label'       => esc_html__('Logo Field', 'harry'),
+            'description' => esc_html__('Simple logo control', 'harry'),
+            'section'     => 'harry_social_info',
+            'default'     => 'on',
+            'choices'     => [
+                'on'  => esc_html__('Enable', 'harry'),
+                'off' => esc_html__('Disable', 'harry'),
+            ],
+        ]
+    );
 }
 harry_header_info();
 harry_header_logo();
+harry_side_info_section();
+harry_social_info();
