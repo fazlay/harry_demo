@@ -14,7 +14,7 @@
     <?php wp_head(); ?>
 </head>
 
-<body>
+<body <?php body_class(); ?>>
     <!-- pre loader area start -->
     <div id="loading">
         <div id="loading-center">
@@ -54,3 +54,4 @@
     </div>
     <!-- back to top end -->
     <?php harry_header(); ?>
+    <?php harry_breadcrumb(); ?>

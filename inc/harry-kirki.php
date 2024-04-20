@@ -215,8 +215,56 @@ function harry_social_info()
             ],
         ]
     );
-}
+};
+function harry_footer_info()
+{
+    new \Kirki\Section(
+        'harry_footer_info',
+        [
+            'title'       => esc_html__('Footer Info', 'harry'),
+            'description' => esc_html__('Footer info section here', 'harry'),
+            'panel'       => 'harry_panel',
+            'priority'    => 160,
+        ]
+    );
+
+    new \Kirki\Field\Text(
+        [
+            'settings' => 'harry_footer_copyright',
+            'label'    => esc_html__('Footer Copyright', 'harry'),
+            'section'  => 'harry_footer_info',
+            'default'  => esc_html__('© 2022 Harry All Rights Reserved.', 'harry'),
+            'priority' => 10,
+        ]
+    );
+};
+
+function harry_blog_section()
+{
+    new \Kirki\Section(
+        'harry_blog_option',
+        [
+            'title'       => esc_html__('Blog Info', 'harry'),
+            'description' => esc_html__('Blog info section here', 'harry'),
+            'panel'       => 'harry_panel',
+            'priority'    => 160,
+        ]
+    );
+
+    new \Kirki\Field\Image(
+        [
+            'settings' => 'harry_breadcrumb_bg',
+            'label'    => esc_html__('Breadcrumb Image', 'harry'),
+            'section'  => 'harry_blog_option',
+
+            'priority' => 10,
+        ]
+    );
+};
+
 harry_header_info();
 harry_header_logo();
 harry_side_info_section();
 harry_social_info();
+harry_footer_info();
+harry_blog_section();

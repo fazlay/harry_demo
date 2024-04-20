@@ -12,3 +12,12 @@ Tags: $TAGS$
 */
 
 /* Add your CSS styles below this comment */
+
+.footer__link ul li{
+    display: inline-block;
+    margin-left: 15px;
+};
+
+.home .breadcrumb__area{
+    display: none ;
+}
