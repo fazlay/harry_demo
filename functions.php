@@ -37,6 +37,16 @@ function harry_widgets()
 {
 
     register_sidebar(array(
+        'name'          => __('Blog Sidebar WIdget', 'harry'),
+        'id'            => 'blog-sidebar',
+        'description'   => __('Add widgets for Footer Widget 01 here', 'harry'),
+        'before_widget' => '<div id="%1$s" class="sidebar__widget mb-40 %2$s">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h3 class="sidebar__widget-title">',
+        'after_title'   => '</h3>',
+    ));
+
+    register_sidebar(array(
         'name'          => __('Footer Widget 01', 'harry'),
         'id'            => 'footer-widget-01',
         'description'   => __('Add widgets for Footer Widget 01 here', 'harry'),

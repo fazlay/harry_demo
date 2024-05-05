@@ -19,7 +19,7 @@
     <div id="loading">
         <div id="loading-center">
             <div id="loading-center-absolute">
-                <!-- loading content here -->
+
                 <div class="preloader__content text-center">
                     <div class="preloader__logo">
                         <img src="assets/img/logo/logo-preloader.svg" alt="">
