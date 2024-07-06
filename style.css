@@ -21,3 +21,7 @@ Tags: $TAGS$
 .home .breadcrumb__area{
     display: none ;
 }
+
+.slider__social-9 ul li a svg {
+    width:14px;
+}
